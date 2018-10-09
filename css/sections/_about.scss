@@ -1,0 +1,123 @@
+.about {
+  padding: 150px 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 178px;
+    background-color: $yellow;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: -89px;
+    right: 60%;
+    left: 0;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__left, &__right {
+    @include col;
+    @include size(12);
+  }
+  &__right {
+    position: relative;
+  }
+
+  &__img {
+    height: 685px;
+    overflow: hidden;
+    position: relative;
+
+    &-item {
+      position: absolute;
+      right: 0;
+      width: 260px;
+      bottom: 21px;
+      height: 207px;
+      border: 14px solid $bg;
+      border-right: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    height: 335px;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+    &-col {
+      @include col;
+      @include size(12);
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+
+
+    position: absolute;
+    left: -315px;
+
+    .row {
+      width: 100%;
+      margin-right: -45px;
+    }
+  }
+
+  &__item {
+    width: 284px;
+    height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 14px solid $text;
+    border-bottom: 14px solid $text;
+    padding-left: 30px;
+
+    &:first-child {
+      border-left: 14px solid $text;
+
+    }
+    &:last-child {
+      border-right: 14px solid $text;
+    }
+
+    &_left {
+      border-color: $bg!important;
+    }
+
+
+    &-title {
+      color: $yellow;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+
+
+
+      &_small {
+        font-size: 24px;
+      }
+    }
+    &-text {
+      font-size: 26px;
+      line-height: 1;
+
+      &_white {
+        color: $bg;
+      }
+    }
+  }
+}

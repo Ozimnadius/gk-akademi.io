@@ -1,0 +1,44 @@
+//variables
+//fonts
+$font: 'Myriad Pro', Arial, sans-serif;
+
+//colors
+$text: #202123;
+$bg: #ffffff;
+$yellow: #e8b93f;
+
+//another
+$font-size: 18px;
+
+//layout
+/*-----------------SECTION-MIXINS--------------------*/
+@import "layout/_mixins";
+/*------------------------SECTION-FONTS----------------*/
+@import "layout/_fonts";
+/*------------------------SECTION-SMART-GRID----------------*/
+@import "layout/_smart-grid";
+/*------------------------SECTION-ADJUSTMENT----------------*/
+@import "layout/_adjustment";
+/*-----------------SECTION-HOVER-ANIM--------------------*/
+@import "layout/_hover-anim";
+/*------------------------SECTION-COMMON----------------*/
+@import "layout/_common";
+
+//sections
+/*------------------------SECTION-HEADER----------------*/
+@import "sections/_header";
+/*-----------------SECTION-SLIDER--------------------*/
+@import "sections/_slider";
+/*-----------------SECTION-ABOUT--------------------*/
+@import "sections/_about";
+/*-----------------SECTION-SERVICES--------------------*/
+@import "sections/_services";
+/*------------------------SECTION-FOOTER---------------------*/
+@import "sections/_footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}

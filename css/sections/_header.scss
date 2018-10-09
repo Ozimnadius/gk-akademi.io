@@ -1,0 +1,23 @@
+.header {
+  background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
+  border-bottom: 4px solid $yellow;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    color: $bg;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

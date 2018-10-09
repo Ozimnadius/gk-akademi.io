@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('MyriadPro-Regular.woff2') format('woff2'),
+        url('MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('MyriadPro-Bold.woff2') format('woff2'),
+        url('MyriadPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

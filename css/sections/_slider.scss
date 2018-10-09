@@ -1,0 +1,165 @@
+.slider {
+  position: relative;
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    pointer-events: none;
+
+    .container {
+      height: 100%;
+    }
+
+    &-wrapper {
+      position: relative;
+      height: 100%;
+    }
+
+    &-button {
+      pointer-events: initial;
+      width: 43px;
+      height: 43px;
+      border: 2px solid $bg;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     transition: .3s;
+      outline: none;
+
+      &:hover {
+        background: $bg;
+        .slider__nav-svg {
+          fill: $yellow;
+        }
+      }
+    }
+    &-svg {
+      margin-left: 5px;
+      width: 14px;
+      height: 24px;
+      fill: $bg;
+      transition: .3s;
+    }
+  }
+
+  &__next {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+  }
+  &__prev {
+    position: absolute;
+    bottom: 60px;
+    right: 65px;
+    transform: rotate(-180deg);
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+
+    &-text {
+      color: $bg;
+      transform: rotate(-90deg);
+      transform-origin: 0 0;
+      margin-bottom: -10px;
+    }
+
+    &-svg {
+      width: 28px;
+      height: 43px;
+    }
+
+
+  }
+
+  &__pagination {
+    position: absolute;
+    width: auto;
+    right: 0;
+    left: initial;
+    bottom: initial;
+    top: 50%;
+    margin-top: -160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-item {
+      color: $bg;
+      font-size: 14px;
+    }
+
+    &-seporator {
+      width: 2px;
+      height: 126px;
+      background-color: $bg;
+      margin-top: 3px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__oblique {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 655px;
+
+    &-svg {
+      height: 100%;
+      width: 100%;
+      fill:$yellow;
+
+      &_lg {
+        display: none;
+      }
+    }
+  }
+
+}
+
+.slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  height: 976px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+
+  .container  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    color: $bg;
+    font-size: 106px;
+    line-height: lh(106,134);
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 359px;
+      height: 13px;
+      background-color: $bg;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+
+}

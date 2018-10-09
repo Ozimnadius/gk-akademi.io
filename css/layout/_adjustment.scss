@@ -1,0 +1,78 @@
+input::-ms-clear {
+  display: none;
+}
+
+html.ie9 * {
+  border-radius: 0 !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: $font-size;
+  box-sizing: border-box;;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: $bg;
+  font-family: $font;
+  color: $text;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  line-height: lh($font-size, 28px);
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  @include wrapper;
+}
+
+.row {
+  @include row-flex;
+}
+
+.content {
+  @include content;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 106px;
+}
+
+h2 {
+  font-size: 76px;
+}
+
+h3 {
+  font-size: 44px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
