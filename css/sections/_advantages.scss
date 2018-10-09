@@ -1,0 +1,83 @@
+.advs {
+  padding: 140px 0 90px 0;
+  position: relative;
+
+  &__title {
+    margin-bottom: 270px;
+    position: relative;
+    z-index: 20;
+    padding-left: 300px;
+  }
+
+  &__items {
+    @include col;
+    @include size(16);
+    @include offset-left(8);
+  }
+  
+  &__angle {
+    background-image: url(../images/bg/bg-adv.png);
+    width: 736px;
+    height: 623px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+  }
+
+  &__man {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 565px;
+    height: 794px;
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    left: 188px;
+    
+    &-text {
+      background-image: url(../images/content/adv-man-text.png);
+      width: 917px;
+      height: 157px;
+      position: absolute;
+      top: 60px;
+      left: calc(100% - 150px);
+      padding: 0 70px 0 160px;
+      display: flex;
+      align-items: center;
+
+
+      opacity: 0.8;
+      font-size: 28px;
+      line-height: lh(28px,38px);
+    }
+  }
+}
+
+.adv {
+  @include col;
+  @include size(8);
+  display: flex;
+  flex-direction: column;align-items: center;
+  margin-bottom: 60px;
+  
+  &__svg {
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: $yellow;
+    margin-bottom: 10px;
+    .cls-1 {
+      fill: $yellow;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: lh(24,26);
+  }
+}
