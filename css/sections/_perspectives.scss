@@ -1,0 +1,74 @@
+.pers {
+  padding: 140px 0 150px 0;
+  background-image: url("/images/bg/bg-pers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include size(20);
+    @include offset(2);
+    text-align: center;
+    opacity: 0.8;
+    color: $bg;
+    font-size: 26px;
+    line-height: lh(26px,36px);
+    margin-bottom: 60px;
+  }
+
+  &__items {
+    @include col;
+    @include size(24);
+    margin-bottom: 80px;
+  }
+
+  &__button {
+    @include col;
+    @include size(12);
+    @include offset(6);
+    height: 83px;
+  }
+}
+
+.per {
+  @include col;
+  @include size(6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 134px;
+    height: 134px;
+    border: 1px solid $yellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  &__svg {
+    width: 70px;
+    height: 70px;
+    fill: $yellow;
+
+    .cls-1 {
+      fill: $yellow;
+    }
+    .cls-2 {
+      fill: none;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $bg;
+    font-size: 22px;
+    line-height: lh(22px,28px);
+  }
+}
