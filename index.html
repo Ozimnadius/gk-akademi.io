@@ -51,7 +51,7 @@
 
             <!-- callorder-button -->
             <div class="header__callorder">
-                <a href="#" class="callorder-button button">
+                <a href="#" class="callorder-button button jsCallorderOpen">
                     Обратная связь
                 </a>
             </div>
@@ -274,7 +274,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="1">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 65">
                                 <path d="M88.61,33.41,55.5,43.7,22.39,33.41V50.6c0,8,14.83,14.4,33.12,14.4s33.12-6.45,33.12-14.4c0-.06,0-.12,0-.19Zm0-3.75L111,21.57,55.5,0,0,21.57l11.83,4.27,1-2.18,4.35-.37.62.65-3.73.89-.54,1.63S5.11,44.25,6.34,53c0,0,5.26,3.17,10.51,0l1.4-23.79v-2l7.82-1.78-.55,1.37-5.83,1.92,2.7,1L55.5,40Z"/>
                             </svg>
@@ -283,7 +283,7 @@
                                 заведениям
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="2">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68">
                                 <path d="M65.16,30.6h-4V22.36a3.1,3.1,0,0,0-3.1-3.1H56.67V0H11.33V2.27H7.93V4.53H4.53v6.8H3.1A3.1,3.1,0,0,0,0,14.43V65.69H.07A2.91,2.91,0,0,0,.6,66.86,2.88,2.88,0,0,0,2.91,68H53.63a2.88,2.88,0,0,0,2.78-2.06L68,34.17V34C68,32,66.8,30.6,65.16,30.6ZM20.4,5.67H31.73a1.13,1.13,0,1,1,0,2.27H20.4a1.13,1.13,0,1,1,0-2.27Zm0,7.93H47.6a1.13,1.13,0,0,1,0,2.27H20.4a1.13,1.13,0,0,1,0-2.27Zm0,7.93H47.6a1.13,1.13,0,1,1,0,2.27H20.4a1.13,1.13,0,1,1,0-2.27ZM2.27,58.4v-44a.83.83,0,0,1,.83-.83H4.53V52.18ZM6.8,6.8H7.93V42.85L6.8,46ZM58.93,30.6H14.43a2.88,2.88,0,0,0-2.78,2.06l-1.45,4V4.53h1.13V29.47H56.67V21.53H58.1a.83.83,0,0,1,.83.83Z"/>
                             </svg>
@@ -291,7 +291,7 @@
                                 Офисам
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="3">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68">
                                 <path d="M0,68H68V63.76H0ZM64.08,23.93H3.92v4.24H64.08ZM34,0,0,16.3v3.61H68V16.3ZM18.31,59.75V32H9.76v27.7Zm39.93,0V32H49.69v27.7Zm-20,0V32H29.72v27.7Z"/>
                             </svg>
@@ -299,7 +299,7 @@
                                 Банкам
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="4">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 54">
                                 <path d="M1.58,37.07H41.45A1.09,1.09,0,0,0,42.53,36V3.29A3.27,3.27,0,0,0,39.28,0H3.75A3.27,3.27,0,0,0,.5,3.29V36A1.09,1.09,0,0,0,1.58,37.07Zm8-22A1.35,1.35,0,0,1,11,13.69H21.59V9.85a1.34,1.34,0,0,1,2.3-1l9.16,9.28a1.37,1.37,0,0,1,0,1.92l-9.16,9.28a1.34,1.34,0,0,1-2.3-1V24.57H11a1.35,1.35,0,0,1-1.34-1.36Zm4.66,30.83H1.08A1.09,1.09,0,0,1,0,44.78V41.45a1.09,1.09,0,0,1,1.08-1.1H17.27A9.08,9.08,0,0,0,14.28,45.88Zm61.64-5.53H73.28V25.45a8.85,8.85,0,0,0-1.48-4.9l-6.6-9.89A8.64,8.64,0,0,0,58,6.8H47.79A2.18,2.18,0,0,0,45.63,9V40.35H28.88a9,9,0,0,1,3,5.53H49.54a8.88,8.88,0,0,1,17.6,0h8.77A1.09,1.09,0,0,0,77,44.78V41.45A1.09,1.09,0,0,0,75.92,40.35ZM65.13,22.52H51.63a1.09,1.09,0,0,1-1.08-1.1V13.85a1.09,1.09,0,0,1,1.08-1.1h8.22a1.09,1.09,0,0,1,.89.46L66,20.8A1.1,1.1,0,0,1,65.13,22.52ZM23.07,40.35a6.83,6.83,0,1,0,6.74,6.83A6.79,6.79,0,0,0,23.07,40.35Zm0,10.24a3.41,3.41,0,1,1,3.37-3.41A3.39,3.39,0,0,1,23.07,50.59ZM58.35,40.35a6.83,6.83,0,1,0,6.74,6.83A6.78,6.78,0,0,0,58.35,40.35Zm0,10.24a3.41,3.41,0,1,1,3.37-3.41A3.39,3.39,0,0,1,58.35,50.59Z"/>
                             </svg>
@@ -308,7 +308,7 @@
                                 доставки
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="5">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463.02 471">
                                 <path class="cls-1"
                                       d="M87.82,239.5a16,16,0,0,0,16,16H359.24a16,16,0,1,0,0-31.93H103.78A16,16,0,0,0,87.82,239.5Z"/>
@@ -343,7 +343,7 @@
                                 компаниям
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="6">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 64.01">
                                 <path d="M2.76,13.42A9,9,0,0,0,0,20V54.67a9,9,0,0,0,2.76,6.58A9,9,0,0,0,9.38,64h1.34V10.67H9.38A9,9,0,0,0,2.76,13.42ZM53.57,4A3.85,3.85,0,0,0,52.4,1.17,3.88,3.88,0,0,0,49.55,0H25.45A3.88,3.88,0,0,0,22.6,1.17,3.85,3.85,0,0,0,21.43,4v6.67h-6.7V64H60.27V10.67h-6.7ZM26.79,5.33H48.21v5.33H26.79Zm26.41,37a1.31,1.31,0,0,1-1,.37H42.86V52a1.29,1.29,0,0,1-1.34,1.33h-8A1.28,1.28,0,0,1,32.14,52V42.67H22.77a1.31,1.31,0,0,1-1-.37,1.3,1.3,0,0,1-.38-1v-8A1.29,1.29,0,0,1,22.77,32h9.38V22.67a1.29,1.29,0,0,1,1.34-1.33h8a1.29,1.29,0,0,1,1.34,1.33V32h9.38a1.29,1.29,0,0,1,1.34,1.33v8h0A1.3,1.3,0,0,1,53.19,42.3Zm19-28.88a9,9,0,0,0-6.61-2.75H64.29V64h1.34A9.41,9.41,0,0,0,75,54.67V20A9,9,0,0,0,72.24,13.42Z"/>
                             </svg>
@@ -352,7 +352,7 @@
                                 учреждениям
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="7">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.98 299.8">
 
                                 <path class="cls-1"
@@ -384,7 +384,7 @@
                                 социальной сферы
                             </div>
                         </div>
-                        <div class="service">
+                        <div class="service jsModalOpen" data-id="8">
                             <svg class="service__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.01 64.98">
                                 <path d="M31.09,0,0,15.13V65H11.52V24.46h41V65H64V15.13ZM23.83,63.42h7.27V57.08H23.83Zm8.92,0H40V57.08H32.75Zm-17.84,0h7.27V57.08H14.91Zm8.92-8.71h7.27V48.37H23.83Zm-8.92,0h7.27V48.37H14.91Zm17.84,0H40V48.37H32.75ZM23.83,46h7.27V39.67H23.83Zm-8.92,0h7.27V39.67H14.91ZM41.67,63.42h7.27V57.08H41.67Z"/>
                             </svg>
@@ -608,7 +608,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="pers__button button">
+                        <a href="#" class="pers__button button jsCallorderOpen">
                             Узнать о сотрудничестве
                         </a>
                     </div>
@@ -669,6 +669,7 @@
                                 </div>
                             </div>
 
+                            <input type="hidden" name="action" value="callorderSubmit">
 
                         </form>
                     </div>
@@ -866,6 +867,7 @@
                                 </div>
                             </div>
 
+                            <input type="hidden" name="action" value="callorderSubmit">
 
                         </form>
                     </div>
@@ -920,6 +922,74 @@
         </div>
     </div>
 </div>
+
+<!-- callorder -->
+<div class="callorder">
+    <div class="callorder__content">
+        <div class="callorder__form">
+            <form action="" method="post" class="contacts__form form form_2">
+                <div class="form__title form__title_2">
+                    Форма обратной связи
+                </div>
+                <div class="form__fields">
+                    <div class="form__field">
+                        <input type="text" name="name" class="form__input form__input_2" required placeholder="Ваше имя*">
+                    </div>
+                    <div class="form__field">
+                        <input type="tel" name="tel" class="form__input form__input_2" required
+                               placeholder="Номер телефона*">
+                    </div>
+                    <div class="form__field">
+                        <input type="email" name="email" class="form__input form__input_2" placeholder="E-mail">
+                    </div>
+                </div>
+
+                <div class="form__submit">
+                    <input type="submit" class="submit submit_2" value="Отправить">
+                </div>
+
+                <div class="form__accept">
+                    <div class="accept">
+                        <input type="checkbox" id="feed" name="feedAccept "
+                               class="accept__check" checked>
+                        <div class="accept__wrapper">
+                            <label for="feed" class="accept__label">
+                                <span class="accept__fake accept__fake_2"></span>
+                            </label>
+                            <a href="" class="accept__link accept__link_2">
+                                Политика конфиденциальности
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" name="action" value="callorderSubmit">
+
+            </form>
+        </div>
+        <div class="callorder__close jsCallorderClose">
+            <svg class="callorder__close-svg">
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+        </div>
+    </div>
+</div>
+<!-- END callorder -->
+
+<!-- modal -->
+<div class="modal">
+    <div class="modal__wrapper">
+        <div class="modal__close jsModalClose">
+            <svg class="modal__close-svg">
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+        </div>
+        <div class="modal__content">
+
+        </div>
+    </div>
+</div>
+<!-- END modal -->
 
 <script src="js/vendor.min.js"></script>
 <script src="js/main.js"></script>

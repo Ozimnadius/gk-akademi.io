@@ -1,71 +1,20 @@
-.feed {
-  background-image: url(../images/bg/bg-feed.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
-  padding: 70px 0 0 0;
-
-  &__title {
-    @include col;
-    @include size(21.5);
-    @include offset-left(2.5);
-    border: 16px solid $bg;
-    border-left: none;
-    margin-bottom: 70px;
-    position: relative;
-    z-index: 20;
-    pointer-events: none;
-
-    &-text {
-      color: $bg;
-      line-height: lh(44px, 54px);
-      text-transform: uppercase;
-
-      &:before {
-        content: '';
-        display: block;
-        height: 50px;
-        width: 16px;
-        background: $bg;
-        margin-bottom: 20px;
-      }
-      &:after {
-        content: '';
-        display: block;
-        height: 50px;
-        width: 16px;
-        background: $bg;
-        margin-top: 20px;
-      }
-    }
-
-    &-relative {
-      position: relative;
-      left: -120px;
-    }
-  }
-
-  .container {
-    position: relative;
-  }
-
-  &__form {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
-}
-
 .form {
   width: 584px;
   background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
   padding: 30px 85px 125px 40px;
+  position: relative;
 
   &_2 {
     width: 100%;
     padding: 30px 40px 40px 40px;
     background-image: none;
     background-color: $bg;
+
+    .form__success {
+      padding: 30px 40px 40px 40px;
+      background-image: none;
+      background-color: $bg;
+    }
   }
 
   &__title {
@@ -109,6 +58,33 @@
   }
 
   &__accept {
+
+  }
+
+  &__success {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
+    padding: 30px 85px 125px 40px;
+    font-size: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: $yellow;
+
+    &-close {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+    }
+    &-svg {
+      width: 25px;
+      height: 25px;
+    }
 
   }
 
@@ -211,4 +187,62 @@
 .disabled {
   pointer-events: none;
   opacity: .7;
+}
+
+.feed {
+  background-image: url(../images/bg/bg-feed.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  padding: 70px 0 0 0;
+
+  &__title {
+    @include col;
+    @include size(21.5);
+    @include offset-left(2.5);
+    border: 16px solid $bg;
+    border-left: none;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 20;
+    pointer-events: none;
+
+    &-text {
+      color: $bg;
+      line-height: lh(44px, 54px);
+      text-transform: uppercase;
+
+      &:before {
+        content: '';
+        display: block;
+        height: 50px;
+        width: 16px;
+        background: $bg;
+        margin-bottom: 20px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        height: 50px;
+        width: 16px;
+        background: $bg;
+        margin-top: 20px;
+      }
+    }
+
+    &-relative {
+      position: relative;
+      left: -120px;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__form {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
