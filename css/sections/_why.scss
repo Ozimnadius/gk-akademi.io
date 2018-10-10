@@ -11,8 +11,10 @@
 
   &__bg2 {
     position: absolute;
-    bottom: -80px;
-    left: 235px;
+    bottom: -225px;
+    left: -150px;
+    width: 622px;
+    height: 521px;
   }
 
 
@@ -41,6 +43,8 @@
   &__left, &__right {
     @include col;
     @include size(12);
+    position: relative;
+    z-index: 20;
   }
 
   &__content {

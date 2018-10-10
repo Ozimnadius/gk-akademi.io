@@ -292,6 +292,13 @@ img {
 .nav__item {
   color: #ffffff;
   margin-right: 40px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.nav__item:hover {
+  color: #e8b93f;
 }
 
 .nav__item:last-child {
@@ -689,6 +696,23 @@ img {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 30px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.service:hover {
+  background-color: #e8b93f;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.service:hover .service__svg {
+  fill: #ffffff;
+}
+
+.service:hover .service__svg .cls-1 {
+  fill: #ffffff;
 }
 
 .service__svg {
@@ -696,6 +720,9 @@ img {
   max-width: 110px;
   max-height: 70px;
   margin-bottom: 35px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .service__svg .cls-1 {
@@ -883,6 +910,19 @@ img {
   align-items: center;
 }
 
+.per:hover .per__img {
+  background-color: #e8b93f;
+  border: 1px solid #ffffff;
+}
+
+.per:hover .per__svg {
+  fill: #ffffff;
+}
+
+.per:hover .per__svg .cls-1 {
+  fill: #ffffff;
+}
+
 .per__img {
   width: 134px;
   height: 134px;
@@ -898,12 +938,18 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 25px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .per__svg {
   width: 70px;
   height: 70px;
   fill: #e8b93f;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .per__svg .cls-1 {
@@ -1171,8 +1217,10 @@ img {
 
 .why__bg2 {
   position: absolute;
-  bottom: -80px;
-  left: 235px;
+  bottom: -225px;
+  left: -150px;
+  width: 622px;
+  height: 521px;
 }
 
 .why__title {
@@ -1213,6 +1261,8 @@ img {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(50% - 30px);
+  position: relative;
+  z-index: 20;
 }
 
 .why__content {
@@ -1335,6 +1385,10 @@ img {
   margin-bottom: 60px;
 }
 
+.contact:hover .contact__value {
+  border-bottom: 1px solid #ffffff;
+}
+
 .contact:last-child {
   margin-bottom: 0;
 }
@@ -1365,6 +1419,11 @@ img {
   color: #ffffff;
   font-size: 32px;
   line-height: 1;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  padding-bottom: 3px;
 }
 
 .vendor {

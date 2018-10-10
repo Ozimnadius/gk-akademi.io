@@ -41,6 +41,19 @@
   flex-direction: column;
   align-items: center;
 
+  &:hover {
+    .per__img {
+      background-color: $yellow;
+      border: 1px solid $bg;
+    }
+    .per__svg {
+      fill: $bg;
+      .cls-1 {
+        fill: $bg;
+      }
+    }
+  }
+
   &__img {
     width: 134px;
     height: 134px;
@@ -50,12 +63,14 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
+    transition: .3s;
   }
 
   &__svg {
     width: 70px;
     height: 70px;
     fill: $yellow;
+    transition: .3s;
 
     .cls-1 {
       fill: $yellow;

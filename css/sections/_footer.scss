@@ -59,6 +59,12 @@
   align-items: center;
   margin-bottom: 60px;
 
+  &:hover {
+    .contact__value {
+      border-bottom: 1px solid $bg;
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -83,6 +89,9 @@
     color: $bg;
     font-size: 32px;
     line-height: 1;
+    border-bottom: 1px solid transparent;
+    transition: .3s;
+    padding-bottom: 3px;
   }
 }
 
