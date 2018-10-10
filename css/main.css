@@ -936,8 +936,8 @@ img {
   margin-left: 15px;
   margin-right: 15px;
   word-wrap: break-word;
-  width: calc(87.5% - 30px);
-  margin-left: calc(12.5% + 15px);
+  width: calc(89.58333% - 30px);
+  margin-left: calc(10.41667% + 15px);
   border: 16px solid #ffffff;
   border-left: none;
   margin-bottom: 70px;
@@ -981,7 +981,7 @@ img {
 
 .feed__form {
   position: absolute;
-  right: -20px;
+  right: 0;
   bottom: 0;
 }
 
@@ -1120,6 +1120,108 @@ img {
 .disabled {
   pointer-events: none;
   opacity: .7;
+}
+
+/*-----------------SECTION-WHY--------------------*/
+.why {
+  padding: 180px 0 150px 0;
+  position: relative;
+}
+
+.why__bg1 {
+  position: absolute;
+  top: -185px;
+  right: -180px;
+  width: 561px;
+}
+
+.why__bg2 {
+  position: absolute;
+  bottom: -80px;
+  left: 235px;
+}
+
+.why__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.why__title-line {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  height: 52px;
+  background-color: #e8b93f;
+}
+
+.why__title-container {
+  min-width: 1200px;
+  padding: 0 30px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.why__title-text {
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.why__left, .why__right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 15px;
+  margin-right: 15px;
+  word-wrap: break-word;
+  width: calc(50% - 30px);
+}
+
+.why__content {
+  opacity: 0.8;
+  font-size: 28px;
+  line-height: 1.35714;
+}
+
+.why__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.why__item:last-child {
+  margin-bottom: 0;
+}
+
+.why__item-img {
+  min-width: 140px;
+  width: 140px;
+  height: 140px;
+  background-color: #e8b93f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.why__item-text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.36364;
 }
 
 /*------------------------SECTION-FOOTER---------------------*/

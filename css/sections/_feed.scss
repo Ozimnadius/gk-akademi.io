@@ -7,8 +7,8 @@
 
   &__title {
     @include col;
-    @include size(21);
-    @include offset-left(3);
+    @include size(21.5);
+    @include offset-left(2.5);
     border: 16px solid $bg;
     border-left: none;
     margin-bottom: 70px;
@@ -51,7 +51,7 @@
 
   &__form {
     position: absolute;
-    right: -20px;
+    right: 0;
     bottom: 0;
   }
 }
