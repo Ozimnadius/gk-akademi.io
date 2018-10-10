@@ -1,12 +1,20 @@
 .why {
   padding: 180px 0 150px 0;
   position: relative;
+  @include lg-block {
+    padding: 100px 0;
+  };
 
   &__bg1 {
     position: absolute;
-    top: -185px;
+    top: 370px;
     right: -180px;
     width: 561px;
+
+    @include lg-block {
+      width: 434px;
+      height: 587px;
+    };
   }
 
   &__bg2 {
@@ -15,6 +23,13 @@
     left: -150px;
     width: 622px;
     height: 521px;
+    @include lg-block {
+      width: 514px;
+      height: 431px;
+      left: 50%;
+      margin-left: -257px;
+      bottom: -325px;
+    };
   }
 
 
@@ -22,17 +37,32 @@
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    @include lg-block {
+      align-items: flex-end;
+    };
 
     &-line {
       flex-grow: 1;
       height: 52px;
       background-color: $yellow;
+      @include lg-block {
+        height: 49px;
+        order: 1;
+        flex-basis: 205px;
+        margin-bottom: 10px;
+      };
     }
     &-container {
       min-width: 1200px;
       padding: 0 30px;
       flex-grow: 1;
-
+      @include lg-block {
+        min-width: initial;
+        width: auto;
+        padding: 0 20px;
+        flex-basis: 640px;
+        padding-right: 0;
+      };
     }
     &-text {
       line-height: 1;
@@ -45,10 +75,19 @@
     @include size(12);
     position: relative;
     z-index: 20;
+    @include size-lg(24);
+    @include lg-block {
+      position: static;
+    };
+  }
+  &__left {
+    margin-bottom: 40px;
+  }
+  &__right {
+    @include size-lg(16);
   }
 
   &__content {
-
     opacity: 0.8;
     font-size: 28px;
     line-height: lh(28px,38px);

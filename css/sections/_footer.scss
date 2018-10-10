@@ -7,23 +7,34 @@
   &__top {
     padding: 140px 0 80px 0;
     border-bottom: 1px solid rgba($bg,.5);
+    @include lg-block {
+      padding-top: 390px;
+      padding-bottom: 60px;
+    };
   }
 
 
   &__bottom {
     padding: 30px 0;
 
+
     &-container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      @include lg-block {
+        flex-direction: column;
+      };
     }
   }
 
   &__copy {
     opacity: 0.6;
     color: $bg;
+    @include lg-block {
+      margin-bottom: 15px;
+    };
   }
 
   &__vendor {
@@ -33,6 +44,9 @@
     right: 30px;
     display: flex;
     align-items: center;
+    @include lg-block{
+      position: static;
+    };
   }
 
 }
@@ -41,7 +55,9 @@
 
   &__title {
     margin-bottom: 70px;
-
+    @include lg-block {
+      margin-bottom: 40px;
+    };
   }
 
   &__row {
@@ -51,6 +67,21 @@
   &__left,&__right {
     @include col;
     @include size(12);
+    @include size-lg(24);
+  }
+  &__left {
+    @include lg-block {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+    };
+  }
+  &__right {
+    @include lg-block {
+      display: flex;
+      justify-content: center;
+    };
+
   }
 }
 
@@ -58,6 +89,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+  @include lg-block {
+    margin-bottom: 50px;
+  };
 
   &:hover {
     .contact__value {

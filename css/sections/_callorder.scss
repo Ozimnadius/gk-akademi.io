@@ -16,6 +16,9 @@
   &__content {
     margin-top: 220px;
     position: relative;
+    @include lg-block {
+      margin-top: 150px;
+    };
   }
 
   &__form {
@@ -74,6 +77,8 @@
   &__content {
     background-color: $bg;
     padding: 40px 0 0 0;
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   &__title {

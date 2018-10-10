@@ -4,6 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
+  @include lg-block {
+    padding: 100px 0;
+  };
 
   &__title {
     margin-bottom: 10px;
@@ -24,6 +27,9 @@
     @include col;
     @include size(24);
     margin-bottom: 80px;
+    @include lg-block {
+      margin-bottom: 0;
+    };
   }
 
   &__button {
@@ -31,6 +37,9 @@
     @include size(12);
     @include offset(6);
     height: 83px;
+    font-size: 26px;
+    @include size-lg(18);
+    @include offset-lg(3);
   }
 }
 
@@ -40,6 +49,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include size-lg(12);
+  @include lg-block {
+    margin-bottom: 50px;
+  };
 
   &:hover {
     .per__img {

@@ -3,12 +3,18 @@
   background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
   padding: 30px 85px 125px 40px;
   position: relative;
+  @include lg-block {
+    width: 578px;
+  };
 
   &_2 {
     width: 100%;
     padding: 30px 40px 40px 40px;
     background-image: none;
     background-color: $bg;
+    @include lg-block {
+      max-width: 554px;
+    };
 
     .form__success {
       padding: 30px 40px 40px 40px;
@@ -193,7 +199,7 @@
   background-image: url(../images/bg/bg-feed.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+  background-position: center 0;
   padding: 70px 0 0 0;
 
   &__title {
@@ -206,11 +212,23 @@
     position: relative;
     z-index: 20;
     pointer-events: none;
+    @include size-lg(24);
+    @include offset-left-lg(0);
+    @include lg-block {
+      border-left: 16px solid $bg;
+      border-top: none;
+      margin-bottom: 60px;
+
+    };
 
     &-text {
       color: $bg;
       line-height: lh(44px, 54px);
       text-transform: uppercase;
+      @include lg-block {
+        display: flex;
+        margin-bottom: 485px;
+      };
 
       &:before {
         content: '';
@@ -219,6 +237,12 @@
         width: 16px;
         background: $bg;
         margin-bottom: 20px;
+        @include lg-block {
+          height: 16px;
+          flex-grow: 1;
+          margin-bottom: 0;
+          margin-right: 20px;
+        };
       }
       &:after {
         content: '';
@@ -227,12 +251,22 @@
         width: 16px;
         background: $bg;
         margin-top: 20px;
+        @include lg-block {
+          height: 16px;
+          flex-grow: 1;
+          margin-top: 0;
+          margin-left: 20px;
+        };
       }
     }
 
     &-relative {
       position: relative;
       left: -120px;
+      @include lg-block {
+        left: 0;
+        top: -10px;
+      };
     }
   }
 
@@ -244,5 +278,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    @include lg-block {
+      left: 50%;
+      margin-left: -289px;
+    };
   }
 }

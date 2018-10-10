@@ -1,5 +1,45 @@
 $(function () {
 
+    /*MMENU*/
+    const mmenu = $('.mmenu');
+    $('.jsMmenuOpen').on('click', function (e) {
+        e.preventDefault();
+        mmenu.addClass('active');
+    });
+    $('.jsMmenuClose').on('click', function (e) {
+        e.preventDefault();
+        mmenu.removeClass('active');
+    });
+    $('.mmenu').on('click', function (e) {
+        if($(e.target).closest('.mmenu__list').length == 0){
+            mmenu.removeClass('active');
+        }
+    });
+    /*END MMENU*/
+
+    /*NAV*/
+
+
+    $('.jsScrollTo').on('click', function (e) {
+        e.preventDefault();
+        let link = $(this),
+            id = link.attr('href'),
+            section = $(id);
+
+        scrollToSection(section);
+    });
+
+    function scrollToSection(section) {
+
+        let scrollTop = section.offset().top - 107;
+
+        mmenu.removeClass('active');
+        $('body,html').animate({
+            scrollTop: scrollTop
+        }, 700);
+    }
+    /*END NAV*/
+
     /*CALLORDER*/
     const callorder = $('.callorder');
     $('form').on('submit', function (e) {
@@ -35,6 +75,11 @@ $(function () {
         e.preventDefault();
         modal.removeClass('active');
         callorder.addClass('active');
+    });
+    $('.callorder').on('click', function (e) {
+        if($(e.target).closest('.callorder__form').length == 0){
+            callorder.removeClass('active');
+        }
     });
     $('body').on('click', '.jsCallorderClose', function (e) {
         e.preventDefault();
@@ -74,6 +119,11 @@ $(function () {
     $('body').on('click', '.jsModalClose', function (e) {
         e.preventDefault();
         modal.removeClass('active');
+    });
+    $('.modal').on('click', function (e) {
+        if($(e.target).closest('.modal__content').length == 0){
+            modal.removeClass('active');
+        }
     });
     /*END MODAL*/
 

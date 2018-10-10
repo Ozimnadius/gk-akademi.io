@@ -1,17 +1,40 @@
 .header {
   background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
   border-bottom: 4px solid $yellow;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  top: 0;
+  left: 0;
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include lg-block {
+      justify-content: initial;
+    };
+  }
+
+  &__logo {
+    @include lg-block{
+      margin-right: 105px;
+      margin-left: auto;
+    };
+  }
+
+  &__nav {
+    @include lg-block {
+      display: none;
+    };
   }
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
+
   &__item {
     color: $bg;
     margin-right: 40px;

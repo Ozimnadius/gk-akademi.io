@@ -1,6 +1,9 @@
 .about {
   padding: 150px 0;
   position: relative;
+  @include lg-block {
+    padding: 90px 0;
+  };
 
   &:before {
     content: '';
@@ -13,6 +16,9 @@
     margin-top: -89px;
     right: 60%;
     left: 0;
+    @include lg-block {
+      display: none;
+    };
   }
 
   > .container {
@@ -23,6 +29,14 @@
   &__left, &__right {
     @include col;
     @include size(12);
+    @include size-lg(24);
+  }
+  &__left {
+    @include lg-block {
+      margin-bottom: 35px;
+      display: flex;
+      justify-content: center;
+    };
   }
   &__right {
     position: relative;
@@ -32,6 +46,14 @@
     height: 685px;
     overflow: hidden;
     position: relative;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include md-block {
+      align-items: flex-end;
+    };
 
     &-item {
       position: absolute;
@@ -45,15 +67,32 @@
       align-items: center;
     }
   }
+  &__pic {
+    width: 100%;
+  }
 
   &__title {
     margin-bottom: 15px;
+    @include lg-block {
+      display: none;
+    };
+    &_lg {
+      display: none;
+      @include lg-block {
+        display: flex;
+        margin-bottom: 35px;
+      };
+    }
   }
 
   &__content {
     height: 335px;
     overflow: hidden;
     margin-bottom: 25px;
+    @include lg-block {
+      height: auto;
+      margin-bottom: 35px;
+    };
 
     &-col {
       @include col;
@@ -64,10 +103,12 @@
   &__items {
     display: flex;
     align-items: center;
-
-
     position: absolute;
     left: -315px;
+    @include lg-block {
+      position: static;
+      justify-content: center;
+    };
 
     .row {
       width: 100%;
@@ -84,17 +125,29 @@
     border-top: 14px solid $text;
     border-bottom: 14px solid $text;
     padding-left: 30px;
+    @include lg-block {
+      border-width: 8px;
+      height: 178px;
+    };
 
     &:first-child {
       border-left: 14px solid $text;
-
+      @include lg-block {
+        border-width: 8px;
+      };
     }
     &:last-child {
       border-right: 14px solid $text;
+      @include lg-block {
+        border-width: 8px;
+      };
     }
 
     &_left {
       border-color: $bg!important;
+      @include lg-block {
+        border-color: $text!important;
+      };
     }
 
 
@@ -104,16 +157,23 @@
       font-weight: 700;
       line-height: 1;
       text-transform: uppercase;
-
-
+      @include lg-block {
+        font-size: 86px;
+      };
 
       &_small {
         font-size: 24px;
+        @include lg-block {
+          font-size: 21px;
+        };
       }
     }
     &-text {
       font-size: 26px;
       line-height: 1;
+      @include lg-block {
+        font-size: 22px;
+      };
 
       &_white {
         color: $bg;

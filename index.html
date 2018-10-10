@@ -25,12 +25,20 @@
 
 <div class="wrapper">
     <!-- header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container header__container">
+
+            <!-- mmenu-button -->
+            <a href="#" class="mmenu-button jsMmenuOpen">
+                <span class="mmenu-button__line"></span>
+                <span class="mmenu-button__line"></span>
+                <span class="mmenu-button__line"></span>
+            </a>
+            <!-- END mmenu-button -->
 
             <!-- logo -->
             <div class="header__logo">
-                <a href="/" class="logo">
+                <a href="#slider" class="logo jsScrollTo">
                     <img src="images/content/logo.png" alt="Company name" class="logo__img">
                 </a>
             </div>
@@ -39,12 +47,12 @@
             <!-- nav -->
             <div class="header__nav">
                 <nav class="nav">
-                    <a href="#section1" class="nav__item">О компании</a>
-                    <a href="#section1" class="nav__item">Наши услуги</a>
-                    <a href="#section1" class="nav__item">Преимущества</a>
-                    <a href="#section1" class="nav__item">Польза</a>
-                    <a href="#section1" class="nav__item">Почему мы</a>
-                    <a href="#section1" class="nav__item">Контакты</a>
+                    <a href="#about" class="nav__item jsScrollTo">О компании</a>
+                    <a href="#services" class="nav__item jsScrollTo">Наши услуги</a>
+                    <a href="#advantages" class="nav__item jsScrollTo">Преимущества</a>
+                    <a href="#use" class="nav__item jsScrollTo">Польза</a>
+                    <a href="#why" class="nav__item jsScrollTo">Почему мы</a>
+                    <a href="#contacts" class="nav__item jsScrollTo">Контакты</a>
                 </nav>
             </div>
             <!-- END nav -->
@@ -66,7 +74,7 @@
         <main class="main">
 
             <!-- slider -->
-            <section class="slider">
+            <section id="slider" class="slider">
 
                 <!-- swiper -->
                 <div class="swiper-container slider__container">
@@ -188,8 +196,14 @@
             <!-- END slider -->
 
             <!-- about -->
-            <section class="about">
+            <section id="about" class="about">
                 <div class="container">
+                    <h2 class="title about__title about__title_lg">
+                        <div class="title__text">
+                            О компании
+                        </div>
+                        <div class="title__line"></div>
+                    </h2>
                     <div class="row">
 
                         <div class="about__left">
@@ -263,7 +277,7 @@
             <!-- END about -->
 
             <!-- services -->
-            <section class="services">
+            <section id="services" class="services">
 
                 <div class="services__bg">
                     <img src="images/bg/bg-services2.png" alt="кому полезны наши услуги">
@@ -398,7 +412,7 @@
             <!-- END services -->
 
             <!-- advantages -->
-            <section class="advs">
+            <section id="advantages" class="advs">
 
                 <div class="advs__angle"></div>
 
@@ -408,7 +422,6 @@
                         <div class="title__line"></div>
                     </h2>
                     <div class="row">
-
 
                         <div class="advs__items">
                             <div class="row">
@@ -490,16 +503,16 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="advs__man" style="background-image:url(images/content/adv-man.png);">
+                                <div class="advs__man-text">
+                                    Мы обеспечиваем функциональную стабильность
+                                    коммерческих организаций, производств и учреждений
+                                    государственного сектора
+                                </div>
+                            </div>
                         </div>
 
-                    </div>
-                </div>
-
-                <div class="advs__man" style="background-image:url(images/content/adv-man.png);">
-                    <div class="advs__man-text">
-                        Мы обеспечиваем функциональную стабильность
-                        коммерческих организаций, производств и учреждений
-                        государственного сектора
                     </div>
                 </div>
 
@@ -507,7 +520,7 @@
             <!-- END advantages -->
 
             <!-- perspectives -->
-            <section class="pers">
+            <section id="use" class="pers">
                 <h2 class="title2 pers__title">
                     Перспективы сотрудничества
                 </h2>
@@ -678,7 +691,7 @@
             <!-- END feed -->
 
             <!-- why -->
-            <section class="why">
+            <section id="why" class="why">
 
                 <div class="why__bg1">
                     <img src="images/bg/bg-why1.png" alt="" class="why__bg1-img">
@@ -754,7 +767,7 @@
     <!-- END page -->
 
     <!-- footer -->
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="contacts footer__top">
             <h2 class="title2 contacts__title">
                 контакты
@@ -990,6 +1003,26 @@
     </div>
 </div>
 <!-- END modal -->
+
+<!-- mmenu -->
+<div class="mmenu">
+    <div class="mmenu__wrapper">
+        <a href="" class="mmenu__close jsMmenuClose">
+            <svg class="mmenu__close-svg">
+                <use xlink:href="images/icons/sprite.svg#close"></use>
+            </svg>
+        </a>
+        <div class="mmenu__list">
+            <a href="#about" class="mmenu__item jsScrollTo">О компании</a>
+            <a href="#services" class="mmenu__item jsScrollTo">Наши услуги</a>
+            <a href="#advantages" class="mmenu__item jsScrollTo">Преимущества</a>
+            <a href="#use" class="mmenu__item jsScrollTo">Польза</a>
+            <a href="#why" class="mmenu__item jsScrollTo">Почему мы</a>
+            <a href="#contacts" class="mmenu__item jsScrollTo">Контакты</a>
+        </div>
+    </div>
+</div>
+<!-- END mmenu -->
 
 <script src="js/vendor.min.js"></script>
 <script src="js/main.js"></script>

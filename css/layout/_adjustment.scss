@@ -62,6 +62,9 @@ h1 {
 
 h2 {
   font-size: 76px;
+  @include lg-block {
+    font-size: 68px;
+  };
 }
 
 h3 {

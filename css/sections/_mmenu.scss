@@ -1,0 +1,82 @@
+.mmenu-button {
+  padding: 12px;
+  border: 1px solid $bg;
+  display: none;
+  @include lg-block {
+    display: block;
+  };
+
+  &__line {
+    width: 27px;
+    height: 2px;
+    background-color: $bg;
+    margin-bottom: 9px;
+    display: block;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.mmenu {
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($text,.4);
+  display: none;
+  align-items: flex-start;
+
+  &.active {
+    display: flex;
+    .mmenu__wrapper {
+      left: 0;
+    }
+  }
+
+  &__wrapper {
+    background-color: $yellow;
+    position: absolute;
+    left: -1000px;
+    top: 0;
+    transition: 1.3s;
+  }
+
+  &__list {
+    width: 374px;
+    padding: 20px 0;
+  }
+
+  &__close {
+    padding: 10px;
+    background-color: $bg;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &-svg {
+      width: 35px;
+      height: 35px;
+      fill: $yellow;
+    }
+  }
+
+  &__item {
+    display: block;
+    color: $bg;
+    font-size: 26px;
+    line-height: 1;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba($bg,.5);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,20 +1,37 @@
 .advs {
   padding: 140px 0 90px 0;
   position: relative;
+  @include lg-block {
+    padding-top: 90px;
+    padding-bottom: 600px;
+  }
+;
 
   &__title {
     margin-bottom: 270px;
     position: relative;
     z-index: 20;
     padding-left: 300px;
+    @include lg-block {
+      padding: 0;
+      margin-bottom: 35px;
+    }
+  ;
   }
 
   &__items {
     @include col;
     @include size(16);
     @include offset-left(8);
+    position: relative;
+    @include size-lg(24);
+    @include offset-left-lg(0);
+    @include lg-block {
+      position: static;
+    }
+  ;
   }
-  
+
   &__angle {
     background-image: url(../images/bg/bg-adv.png);
     width: 736px;
@@ -23,6 +40,16 @@
     z-index: 10;
     top: 0;
     left: 0;
+    @include lg-block {
+      width: 508px;
+      height: 187px;
+      top: initial;
+      left: initial;
+      bottom: 0;
+      right: 0;
+      background-image: url(../images/bg/bg-adv-lg.png);
+    }
+  ;
   }
 
   &__man {
@@ -32,9 +59,16 @@
     height: 794px;
     position: absolute;
     z-index: 20;
-    bottom: 0;
-    left: 188px;
-    
+    bottom: -90px;
+    left: -600px;
+    @include lg-block {
+      width: 409px;
+      height: 575px;
+      bottom: 0;
+      left: -85px;
+    }
+  ;
+
     &-text {
       background-image: url(../images/content/adv-man-text.png);
       width: 917px;
@@ -46,10 +80,20 @@
       display: flex;
       align-items: center;
 
-
       opacity: 0.8;
       font-size: 28px;
-      line-height: lh(28px,38px);
+      line-height: lh(28px, 38px);
+
+      @include lg-block {
+        background-image: url(../images/content/adv-man-text-lg.png);
+        width: 539px;
+        height: 228px;
+        padding: 0 25px 0 130px;
+        top: 40px;
+        left: calc(100% - 120px);
+      }
+    ;
+
     }
   }
 }
@@ -58,9 +102,10 @@
   @include col;
   @include size(8);
   display: flex;
-  flex-direction: column;align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 60px;
-  
+
   &__svg {
     width: 80px;
     height: 70px;
@@ -78,6 +123,6 @@
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-    line-height: lh(24,26);
+    line-height: lh(24, 26);
   }
 }
