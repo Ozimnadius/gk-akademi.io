@@ -61,12 +61,22 @@
   background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
   padding: 30px 85px 125px 40px;
 
+  &_2 {
+    width: 100%;
+    padding: 30px 40px 40px 40px;
+    background-image: none;
+    background-color: $bg;
+  }
+
   &__title {
     text-align: center;
     color: $bg;
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    &_2{
+      color: $text;
+    }
   }
 
   &__fields {
@@ -87,6 +97,11 @@
     padding: 14px 20px;
     outline: none;
     color: $bg;
+
+    &_2 {
+      border: 1px solid $text;
+      color: $text;
+    }
   }
 
   &__submit {
@@ -111,9 +126,18 @@
   transition: .3s;
   cursor: pointer;
 
+
+
   &:hover {
     background-color: $bg;
     color: $text;
+  }
+
+  &_2{
+    &:hover {
+      background-color: $text;
+      color: $bg;
+    }
   }
 }
 
@@ -161,6 +185,15 @@
       border-left: 1px solid $bg;
       transform: rotate(-45deg);
     }
+
+    &_2 {
+      background: transparent;
+      border: 1px solid $yellow;
+
+      &:after {
+        border-color: $yellow;
+      }
+    }
   }
 
   &__link {
@@ -168,6 +201,10 @@
     color: $bg;
     font-size: 14px;
     text-decoration: underline;
+
+    &_2 {
+      color: $text;
+    }
   }
 }
 
