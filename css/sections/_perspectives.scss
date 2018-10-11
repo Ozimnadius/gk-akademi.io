@@ -7,6 +7,9 @@
   @include lg-block {
     padding: 100px 0;
   };
+  @include sm-block {
+    padding: 50px 0;
+  };
 
   &__title {
     margin-bottom: 10px;
@@ -21,6 +24,12 @@
     font-size: 26px;
     line-height: lh(26px,36px);
     margin-bottom: 60px;
+    @include size-sm(24);
+  @include offset-sm(0);
+    @include sm-block {
+      font-size: 20px;
+      margin-bottom: 45px;
+    };
   }
 
   &__items {
@@ -40,6 +49,12 @@
     font-size: 26px;
     @include size-lg(18);
     @include offset-lg(3);
+    @include size-xs(24);
+    @include offset-xs(0);
+    @include xs-block {
+      font-size: 20px;
+      height: 63px;
+    };
   }
 }
 
@@ -53,6 +68,7 @@
   @include lg-block {
     margin-bottom: 50px;
   };
+  @include size-xs(24);
 
   &:hover {
     .per__img {

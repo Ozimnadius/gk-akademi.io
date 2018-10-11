@@ -4,6 +4,9 @@
   @include lg-block {
     padding: 90px 0;
   };
+  @include sm-block {
+    padding: 50px 0;
+  };
 
   &:before {
     content: '';
@@ -37,6 +40,9 @@
       display: flex;
       justify-content: center;
     };
+    @include sm-block {
+      margin-bottom: 25px;
+    };
   }
   &__right {
     position: relative;
@@ -53,6 +59,10 @@
     justify-content: center;
     @include md-block {
       align-items: flex-end;
+    };
+    @include sm-block {
+      height: auto;
+      width: 100%;
     };
 
     &-item {
@@ -82,6 +92,9 @@
         display: flex;
         margin-bottom: 35px;
       };
+      @include sm-block {
+        margin-bottom: 25px;
+      };
     }
   }
 
@@ -97,6 +110,13 @@
     &-col {
       @include col;
       @include size(12);
+      @include size-sm(24);
+      @include sm-block {
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      };
     }
   }
 
@@ -108,6 +128,9 @@
     @include lg-block {
       position: static;
       justify-content: center;
+    };
+    @include sm-block {
+      flex-direction: column;
     };
 
     .row {
@@ -129,17 +152,36 @@
       border-width: 8px;
       height: 178px;
     };
+    @include sm-block {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-width: 4px;
+      border: 4px solid $text;
+      padding: 40px 20px;
+      text-align: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    };
 
     &:first-child {
       border-left: 14px solid $text;
       @include lg-block {
         border-width: 8px;
       };
+      @include sm-block {
+        border-width: 4px;
+      };
     }
     &:last-child {
       border-right: 14px solid $text;
       @include lg-block {
         border-width: 8px;
+      };
+      @include sm-block {
+        border-width: 4px;
       };
     }
 
@@ -177,6 +219,9 @@
 
       &_white {
         color: $bg;
+        @include lg-block {
+          color: $text;
+        };
       }
     }
   }

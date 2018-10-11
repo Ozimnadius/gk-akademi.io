@@ -1,6 +1,9 @@
 .slider {
   position: relative;
   margin-top: 107px;
+  @include sm-block {
+    margin-top: 63px;
+  };
 
   &__nav {
     position: absolute;
@@ -10,6 +13,10 @@
     right: 0;
     z-index: 20;
     pointer-events: none;
+    @include sm-block {
+      top: initial;
+      bottom: 20px;
+    };
 
     .container {
       height: 100%;
@@ -18,6 +25,10 @@
     &-wrapper {
       position: relative;
       height: 100%;
+      @include sm-block {
+        display: flex;
+        justify-content: center;
+      };
     }
 
     &-button {
@@ -55,6 +66,9 @@
     @include lg-block {
       bottom: 30px;
     };
+    @include sm-block{
+      position: static;
+    };
   }
   &__prev {
     position: absolute;
@@ -64,6 +78,10 @@
     @include lg-block {
       bottom: 30px;
     };
+    @include sm-block {
+      position: static;
+      margin-right: 25px;
+    };
   }
 
   &__info {
@@ -72,6 +90,9 @@
     bottom: 60px;
     @include lg-block {
       bottom: 30px;
+    };
+    @include sm-block {
+      display: none;
     };
 
     &-text {
@@ -100,6 +121,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include sm-block {
+      display: none;
+    };
 
     &-item {
       color: $bg;
@@ -125,6 +149,9 @@
     width: 655px;
     @include lg-block{
       width: 317px;
+    };
+    @include sm-block {
+      display: none;
     };
 
     &-svg {
@@ -155,11 +182,18 @@
   @include lg-block {
     height: 666px;
   };
+  @include sm-block {
+    height: 316px;
+    padding-bottom: 60px;
+  };
 
   .container  {
     height: 100%;
     display: flex;
     align-items: center;
+      @include sm-block {
+        justify-content: center;
+      };
   }
 
   &__title {
@@ -171,6 +205,10 @@
     position: relative;
     @include lg-block {
       font-size: 76px;
+    };
+    @include sm-block {
+      font-size: 34px;
+      text-align: center;
     };
 
     &:after {
@@ -184,6 +222,10 @@
       right: 0;
       @include lg-block {
         width: 259px;
+      };
+      @include sm-block {
+        width: 115px;
+        height: 6px;
       };
     }
   }

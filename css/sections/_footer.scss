@@ -11,6 +11,10 @@
       padding-top: 390px;
       padding-bottom: 60px;
     };
+    @include sm-block {
+      padding-top: 50px;
+      padding-bottom: 40px;
+    };
   }
 
 
@@ -32,6 +36,7 @@
   &__copy {
     opacity: 0.6;
     color: $bg;
+    text-align: center;
     @include lg-block {
       margin-bottom: 15px;
     };
@@ -126,6 +131,9 @@
     border-bottom: 1px solid transparent;
     transition: .3s;
     padding-bottom: 3px;
+    @include sm-block {
+      font-size: 24px;
+    };
   }
 }
 

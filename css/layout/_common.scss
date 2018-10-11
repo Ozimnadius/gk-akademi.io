@@ -25,6 +25,9 @@
     text-transform: uppercase;
     line-height: 1;
     margin-right: 30px;
+    @include sm-block {
+      margin-right: 20px;
+    };
   }
 
   &__line {
@@ -35,6 +38,9 @@
     background-color: $yellow;
     @include lg-block {
       height: 46px;
+    };
+    @include sm-block {
+      height: 19px;
     };
   }
 }
@@ -60,6 +66,10 @@
     @include lg-block {
       display: none;
     };
+    @include sm-block {
+      height: 19px;
+      display: block;
+    };
   }
   &:after {
     content: '';
@@ -69,6 +79,10 @@
     margin-left: 20px;
     @include lg-block {
       display: none;
+    };
+    @include sm-block {
+      height: 19px;
+      display: block;
     };
   }
 }

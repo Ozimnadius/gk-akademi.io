@@ -18,7 +18,11 @@ $(function () {
     /*END MMENU*/
 
     /*NAV*/
+    let marginTop = 107;
 
+    if($(window).width()<768){
+        marginTop = 63;
+    }
 
     $('.jsScrollTo').on('click', function (e) {
         e.preventDefault();
@@ -31,7 +35,7 @@ $(function () {
 
     function scrollToSection(section) {
 
-        let scrollTop = section.offset().top - 107;
+        let scrollTop = section.offset().top - marginTop;
 
         mmenu.removeClass('active');
         $('body,html').animate({
@@ -107,6 +111,7 @@ $(function () {
                     modalContent.html(result.html);
                     modal.addClass('active');
                     callorder.removeClass('active');
+                    $('body').addClass('noscroll');
                 } else {
                     alert('Что-то пошло не так, попробуйте еще раз!!!');
                 }
@@ -119,6 +124,7 @@ $(function () {
     $('body').on('click', '.jsModalClose', function (e) {
         e.preventDefault();
         modal.removeClass('active');
+        $('body').removeClass('noscroll');
     });
     $('.modal').on('click', function (e) {
         if($(e.target).closest('.modal__content').length == 0){

@@ -6,6 +6,12 @@
   @include lg-block {
     width: 578px;
   };
+  @include sm-block {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 95px;
+  };
 
   &_2 {
     width: 100%;
@@ -14,6 +20,9 @@
     background-color: $bg;
     @include lg-block {
       max-width: 554px;
+    };
+    @include sm-block {
+      padding: 30px 20px;
     };
 
     .form__success {
@@ -32,6 +41,9 @@
     &_2{
       color: $text;
     }
+    @include sm-block {
+      font-size: 20px;
+    };
   }
 
   &__fields {
@@ -107,9 +119,9 @@
   font-weight: 700;
   transition: .3s;
   cursor: pointer;
-
-
-
+  @include sm-block {
+    height: 44px;
+  };
   &:hover {
     background-color: $bg;
     color: $text;
@@ -220,6 +232,9 @@
       margin-bottom: 60px;
 
     };
+    @include sm-block {
+      border-width: 6px;
+    };
 
     &-text {
       color: $bg;
@@ -228,6 +243,9 @@
       @include lg-block {
         display: flex;
         margin-bottom: 485px;
+      };
+      @include xs-block {
+        margin-bottom: 420px;
       };
 
       &:before {
@@ -243,6 +261,10 @@
           margin-bottom: 0;
           margin-right: 20px;
         };
+        @include sm-block{
+          margin-right: 10px;
+          height: 8px;
+        };
       }
       &:after {
         content: '';
@@ -256,6 +278,10 @@
           flex-grow: 1;
           margin-top: 0;
           margin-left: 20px;
+        };
+        @include sm-block{
+          margin-left: 10px;
+          height: 8px;
         };
       }
     }
@@ -281,6 +307,12 @@
     @include lg-block {
       left: 50%;
       margin-left: -289px;
+    };
+    @include sm-block {
+      width: calc(100% - 50px);
+      margin-left: 25px;
+      margin-right: 25px;
+      left: 0;
     };
   }
 }

@@ -5,6 +5,9 @@
   @include lg-block {
     display: block;
   };
+  @include sm-block {
+    padding: 8px;
+  };
 
   &__line {
     width: 27px;
@@ -15,6 +18,11 @@
     &:last-child {
       margin-bottom: 0;
     }
+    @include sm-block {
+      width: 19px;
+      height: 2px;
+      margin-bottom: 5px;
+    };
   }
 }
 
@@ -42,11 +50,19 @@
     left: -1000px;
     top: 0;
     transition: 1.3s;
+    @include xs-block {
+      width: 100%;
+      height: 100%;
+    };
   }
 
   &__list {
     width: 374px;
     padding: 20px 0;
+    @include xs-block {
+      width: 100%;
+      height: 100%;
+    };
   }
 
   &__close {
@@ -74,6 +90,10 @@
     padding: 25px 0;
     text-align: center;
     border-bottom: 1px solid rgba($bg,.5);
+    @include sm-block {
+      font-size: 22px;
+      padding: 20px;
+    };
 
     &:last-child {
       border-bottom: none;

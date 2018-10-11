@@ -4,6 +4,9 @@
   @include lg-block {
     padding: 100px 0;
   };
+  @include sm-block{
+    padding: 50px 0;
+  };
 
   &__bg1 {
     position: absolute;
@@ -14,6 +17,9 @@
     @include lg-block {
       width: 434px;
       height: 587px;
+    };
+    @include sm-block {
+      display: none;
     };
   }
 
@@ -29,6 +35,9 @@
       left: 50%;
       margin-left: -257px;
       bottom: -325px;
+    };
+    @include sm-block {
+      display: none;
     };
   }
 
@@ -50,6 +59,10 @@
         order: 1;
         flex-basis: 205px;
         margin-bottom: 10px;
+      };
+      @include sm-block {
+        height: 19px;
+        margin-bottom: 5px;
       };
     }
     &-container {
@@ -85,12 +98,16 @@
   }
   &__right {
     @include size-lg(16);
+    @include size-sm(24);
   }
 
   &__content {
     opacity: 0.8;
     font-size: 28px;
     line-height: lh(28px,38px);
+    @include sm-block {
+      font-size: 20px;
+    };
   }
 
 
@@ -113,12 +130,23 @@
       align-items: center;
       justify-content: center;
       margin-right: 24px;
+      @include xs-block {
+        min-width: 52px;
+        width: 52px;
+        height: 52px;
+        background-color: $yellow;
+        margin-right: 20px;
+        padding: 8px;
+      };
     }
 
     &-text {
       font-size: 22px;
       font-weight: 700;
       line-height: lh(22px,30px);
+      @include sm-block {
+        font-size: 18px;
+      };
     }
   }
 }
