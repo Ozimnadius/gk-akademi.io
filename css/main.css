@@ -2750,7 +2750,7 @@ img {
 
 /*------------------------SECTION-FOOTER---------------------*/
 .footer {
-  background-image: url(/images/bg/bg-footer.jpg);
+  background-image: url(../images/bg/bg-footer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0;
