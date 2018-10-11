@@ -133,6 +133,27 @@ $(function () {
     });
     /*END MODAL*/
 
+    /*FZ*/
+    const fz = $('.fz');
+
+    $('body').on('click', '.accept__link', function (e) {
+        e.preventDefault();
+        $('body').addClass('noscroll');
+        fz.addClass('active');
+    });
+    $('body').on('click', '.jsFzClose', function (e) {
+        e.preventDefault();
+        $('body').removeClass('noscroll');
+        fz.removeClass('active');
+    });
+    fz.on('click', function (e) {
+        if($(e.target).closest('.fz__content').length == 0){
+            $('body').removeClass('noscroll');
+            fz.removeClass('active');
+        }
+    });
+    /*END FZ*/
+
     /*SWIPER*/
     const slider = new Swiper('.slider__container', {
         // Optional parameters
