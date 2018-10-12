@@ -1,5 +1,7 @@
 <?php
 header('Content-Type: application/json');
+require 'config.php';
+require 'recaptchalib.php';
 
 $data = $_POST;
 $action = $data['action'];
@@ -7,7 +9,7 @@ switch ($action) {
     case 'callorderSubmit':
         echo json_encode(array(
             'status' => true,
-            'html' => '<div class="form__success">Спасибо мы скоро с Вами свяжемся. <div class="form__success-close"><svg class="form__success-svg"><use xlink:href="images/icons/sprite.svg#close"></use> </svg></div></div>'
+            'html' => callorderSubmit($cnf, $data)
         ));
         exit();
         break;
@@ -40,7 +42,7 @@ function modalContent($id)
     <ul class="modal__list">
         <li class="modal__item">Оборудование для организации учебного процесса</li>
         <li class="modal__item">Хозяйственные, моющие и дезинфицирующие средства</li>
-        <li class="modal__item">Товары для делопроизводства </li>
+        <li class="modal__item">Товары для делопроизводства</li>
         <li class="modal__item">Компьютеры и комплектующие</li>
         <li class="modal__item">Системы архивации и хранения</li>
         <li class="modal__item">Презентационное и демонстрационное оборудование</li>
@@ -58,4 +60,72 @@ function modalContent($id)
     $html = ob_get_contents();
     ob_end_clean();
     return $html;
+}
+
+function callorderSubmit($cnf, $data)
+{
+
+    $re = new ReCaptcha($cnf['privateKey']);
+    $reResult = $re->verifyResponse($_SERVER['REMOTE_ADDR'], $data['g-recaptcha-response']);
+
+
+
+
+    if ($reResult->success) {
+        /*mail*/
+        $email = 'client@web-comp.ru';
+        $title = 'Форма обратной связи с сайта gk-akademi.ru';
+        ob_start(); ?>
+        <h3>Форма обратной связи с сайта gk-akademi.ru</h3>
+        <h4>Имя: </h4><?= $data['name'] ?> <br>
+        <h4>Номер телефона: </h4><?= $data['tel'] ?> <br>
+        <h4>Email: </h4><?= $data['email'] ?>
+        <?
+        $content = ob_get_contents();
+        ob_end_clean();
+
+        $result = mail($email, $title, $content);
+        /*END mail*/
+
+        if ($result) {
+            ob_start(); ?>
+            <div class="form__success">Спасибо мы скоро с Вами свяжемся.
+                <div class="form__success-close">
+                    <svg class="form__success-svg">
+                        <use xlink:href="images/icons/sprite.svg#close"></use>
+                    </svg>
+                </div>
+            </div>
+            <?
+            $html = ob_get_contents();
+            ob_end_clean();
+            return $html;
+        } else {
+            ob_start(); ?>
+            <div class="form__success form__success_error">Что-то пошло не так попробуйте еще раз!
+                <div class="form__success-close">
+                    <svg class="form__success-svg">
+                        <use xlink:href="images/icons/sprite.svg#close"></use>
+                    </svg>
+                </div>
+            </div>
+            <?
+            $html = ob_get_contents();
+            ob_end_clean();
+            return $html;
+        }
+    } else {
+        ob_start(); ?>
+        <div class="form__success form__success_error">Вы робот!
+            <div class="form__success-close">
+                <svg class="form__success-svg">
+                    <use xlink:href="images/icons/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+        <?
+        $html = ob_get_contents();
+        ob_end_clean();
+        return $html;
+    }
 }

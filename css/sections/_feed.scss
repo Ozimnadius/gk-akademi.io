@@ -13,6 +13,10 @@
     padding-bottom: 95px;
   };
 
+  &.disabled {
+    opacity: 1;
+  }
+
   &_2 {
     width: 100%;
     padding: 30px 40px 40px 40px;
@@ -29,6 +33,27 @@
       padding: 30px 40px 40px 40px;
       background-image: none;
       background-color: $bg;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($yellow,.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+      display: flex;
+    }
+
+    &-img {
+      width: 100px;
     }
   }
 
@@ -92,6 +117,10 @@
     display: flex;
     align-items: center;
     color: $yellow;
+
+    &_error {
+      color: red;
+    }
 
     &-close {
       position: absolute;

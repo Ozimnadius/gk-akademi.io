@@ -11,7 +11,7 @@ $(function () {
         mmenu.removeClass('active');
     });
     $('.mmenu').on('click', function (e) {
-        if($(e.target).closest('.mmenu__list').length == 0){
+        if ($(e.target).closest('.mmenu__list').length == 0) {
             mmenu.removeClass('active');
         }
     });
@@ -20,7 +20,7 @@ $(function () {
     /*NAV*/
     let marginTop = 107;
 
-    if($(window).width()<768){
+    if ($(window).width() < 768) {
         marginTop = 63;
     }
 
@@ -42,13 +42,13 @@ $(function () {
             scrollTop: scrollTop
         }, 700);
     }
+
     /*END NAV*/
 
     /*CALLORDER*/
     const callorder = $('.callorder');
     $('form').on('submit', function (e) {
         e.preventDefault();
-
         let form = $(this),
             data = form.serialize();
 
@@ -61,6 +61,10 @@ $(function () {
 
                 if (result.status) {
                     form.append(result.html);
+                    clearForms();
+                    $('.form__loader').addClass('active');
+                    grecaptcha.reset();
+                    grecaptcha.execute();
                 } else {
                     alert('Что-то пошло не так, попробуйте еще раз!!!');
                 }
@@ -70,6 +74,11 @@ $(function () {
             }
         });
     });
+    function clearForms() {
+        $('.form').each(function (indx, elem) {
+            elem.reset();
+        })
+    }
 
     $('body').on('click', '.form__success-close', function (e) {
         $('.form__success').remove();
@@ -81,7 +90,7 @@ $(function () {
         callorder.addClass('active');
     });
     $('.callorder').on('click', function (e) {
-        if($(e.target).closest('.callorder__form').length == 0){
+        if ($(e.target).closest('.callorder__form').length == 0) {
             callorder.removeClass('active');
         }
     });
@@ -96,10 +105,10 @@ $(function () {
     $('body').on('click', '.jsModalOpen', function (e) {
         e.preventDefault();
         let modalContent = modal.find('.modal__content'),
-        data = {
-            id: parseInt($(this).data('id')),
-            action: 'modalOpen'
-        };
+            data = {
+                id: parseInt($(this).data('id')),
+                action: 'modalOpen'
+            };
 
         $.ajax({
             dataType: "json",
@@ -127,7 +136,7 @@ $(function () {
         $('body').removeClass('noscroll');
     });
     $('.modal').on('click', function (e) {
-        if($(e.target).closest('.modal__content').length == 0){
+        if ($(e.target).closest('.modal__content').length == 0) {
             modal.removeClass('active');
         }
     });
@@ -147,12 +156,16 @@ $(function () {
         fz.removeClass('active');
     });
     fz.on('click', function (e) {
-        if($(e.target).closest('.fz__content').length == 0){
+        if ($(e.target).closest('.fz__content').length == 0) {
             $('body').removeClass('noscroll');
             fz.removeClass('active');
         }
     });
     /*END FZ*/
+
+    /*reCaptcha*/
+
+    /*END reCaptcha*/
 
     /*SWIPER*/
     const slider = new Swiper('.slider__container', {
@@ -192,4 +205,20 @@ $(function () {
     });
     /*END SWIPER*/
 
+
 });
+
+
+window.onload = function () {
+    grecaptcha.execute();
+};
+
+function onSubmit(token) {
+    let formLoader = $('.form__loader'),
+        submitResponse = $('.form input[name="g-recaptcha-response"]');
+
+    formLoader.removeClass('active');
+    submitResponse.val(token);
+}
+
+/*END reCaptcha*/
