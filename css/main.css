@@ -2728,6 +2728,12 @@ img {
   }
 }
 
+.g-recaptcha {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
 /*-----------------SECTION-MMENU--------------------*/
 .mmenu-button {
   padding: 12px;

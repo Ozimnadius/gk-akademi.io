@@ -263,6 +263,12 @@
   }
 }
 
+.g-recaptcha {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
 .grecaptcha-badge {
   //display: none;
 }
