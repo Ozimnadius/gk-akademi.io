@@ -84,7 +84,10 @@ function callorderSubmit($cnf, $data)
         $content = ob_get_contents();
         ob_end_clean();
 
-        $result = mail($email, $title, $content);
+        $headers = "MIME-Version: 1.0\n" ;
+        $headers .= "Content-Type: text/html; charset=\"windows-1251\"\n";
+
+        $result = mail($email, $title, $content,$headers);
         /*END mail*/
 
         if ($result) {
