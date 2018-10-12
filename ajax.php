@@ -76,10 +76,10 @@ function callorderSubmit($cnf, $data)
         $email = 'client@web-comp.ru';
         $title = 'Форма обратной связи с сайта gk-akademi.ru';
         ob_start(); ?>
-        <h3>Форма обратной связи с сайта gk-akademi.ru</h3>
-        <h4>Имя: </h4><?= $data['name'] ?> <br>
-        <h4>Номер телефона: </h4><?= $data['tel'] ?> <br>
-        <h4>Email: </h4><?= $data['email'] ?>
+        <b>Форма обратной связи с сайта gk-akademi.ru</b>
+        <b>Имя: </b><?= $data['name'] ?> <br>
+        <b>Номер телефона: </b><?= $data['tel'] ?> <br>
+        <b>Email: </b><?= $data['email'] ?>
         <?
         $content = ob_get_contents();
         ob_end_clean();
