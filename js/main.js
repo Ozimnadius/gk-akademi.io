@@ -47,38 +47,6 @@ $(function () {
 
     /*CALLORDER*/
     const callorder = $('.callorder');
-    $('form').on('submit', function (e) {
-        e.preventDefault();
-        let form = $(this),
-            data = form.serialize();
-
-        $.ajax({
-            dataType: "json",
-            type: "POST",
-            url: 'ajax.php',
-            data: data,
-            success: function (result) {
-
-                if (result.status) {
-                    form.append(result.html);
-                    clearForms();
-                    $('.form__loader').addClass('active');
-                    grecaptcha.reset();
-                    grecaptcha.execute();
-                } else {
-                    alert('Что-то пошло не так, попробуйте еще раз!!!');
-                }
-            },
-            error: function (result) {
-                alert('Что-то пошло не так, попробуйте еще раз!!!');
-            }
-        });
-    });
-    function clearForms() {
-        $('.form').each(function (indx, elem) {
-            elem.reset();
-        })
-    }
 
     $('body').on('click', '.form__success-close', function (e) {
         $('.form__success').remove();
@@ -207,18 +175,53 @@ $(function () {
 
 
 });
-
+let form;
 
 window.onload = function () {
-    grecaptcha.execute();
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+        form = $(this);
+        $('.form__loader').addClass('active');
+        grecaptcha.execute();
+
+    });
+
+
 };
 
 function onSubmit(token) {
     let formLoader = $('.form__loader'),
         submitResponse = $('.form input[name="g-recaptcha-response"]');
-
-    formLoader.removeClass('active');
     submitResponse.val(token);
+    let data = form.serialize();
+
+    $.ajax({
+        dataType: "json",
+        type: "POST",
+        url: 'ajax.php',
+        data: data,
+        success: function (result) {
+            if (result.status) {
+                form.append(result.html);
+                clearForms();
+                formLoader.removeClass('active');
+                grecaptcha.reset();
+            } else {
+                alert('Что-то пошло не так, попробуйте еще раз!!!');
+            }
+        },
+        error: function (result) {
+            alert('Что-то пошло не так, попробуйте еще раз!!!');
+        }
+    });
+    // formLoader.removeClass('active');
+    // submitResponse.val(token);
+}
+
+function clearForms() {
+    $('.form').each(function (indx, elem) {
+        elem.reset();
+    })
 }
 
 /*END reCaptcha*/

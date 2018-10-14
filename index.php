@@ -692,7 +692,7 @@
                             <input type="hidden" name="action" value="callorderSubmit">
                             <input type="hidden" name="g-recaptcha-response" value="">
 
-                            <div class="form__loader active">
+                            <div class="form__loader">
                                 <img src="images/icons/oval.svg" alt="Загрузка" class="form__loader-img">
                             </div>
                         </form>
@@ -903,7 +903,7 @@
                             <input type="hidden" name="action" value="callorderSubmit">
                             <input type="hidden" name="g-recaptcha-response" value="">
 
-                            <div class="form__loader active">
+                            <div class="form__loader">
                                 <img src="images/icons/oval.svg" alt="Загрузка" class="form__loader-img">
                             </div>
                         </form>
@@ -1004,7 +1004,7 @@
                 <input type="hidden" name="action" value="callorderSubmit">
                 <input type="hidden" name="g-recaptcha-response" value="">
 
-                <div class="form__loader active">
+                <div class="form__loader">
                     <img src="images/icons/oval.svg" alt="Загрузка" class="form__loader-img">
                 </div>
             </form>
