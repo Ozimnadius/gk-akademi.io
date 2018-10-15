@@ -76,16 +76,32 @@ function callorderSubmit($cnf, $data)
         $email = 'client@web-comp.ru';
         $title = 'Форма обратной связи с сайта gk-akademi.ru';
         ob_start(); ?>
-        <b>Форма обратной связи с сайта gk-akademi.ru</b>
-        <b>Имя: </b><?= $data['name'] ?> <br>
-        <b>Номер телефона: </b><?= $data['tel'] ?> <br>
-        <b>Email: </b><?= $data['email'] ?>
+        <table>
+            <tr>
+                <td><b>Форма обратной связи с сайта gk-akademi.ru</b></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>Имя: </b></td>
+                <td><?= $data['name'] ?></td>
+            </tr>
+            <tr>
+                <td><b>Номер телефона: </b></td>
+                <td><?= $data['tel'] ?> <br></td>
+            </tr>
+            <tr>
+                <td><b>Email: </b></td>
+                <td><?= $data['email'] ?></td>
+            </tr>
+        </table>
+
         <?
         $content = ob_get_contents();
         ob_end_clean();
 
-        $headers = "MIME-Version: 1.0\n" ;
-        $headers .= "Content-Type: text/html; charset=\"windows-1251\"\n";
+//        $headers = "MIME-Version: 1.0\n" ;
+//        $headers .= "Content-Type: text/html; charset=\"windows-1251\"\n";
+        $headers = "Content-type: text/html; charset=\"utf-8\"";
 
         $result = mail($email, $title, $content,$headers);
         /*END mail*/
