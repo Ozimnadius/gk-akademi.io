@@ -568,6 +568,7 @@ img {
 }
 
 .slider__info {
+  display: none;
   position: absolute;
   left: 0;
   bottom: 60px;
@@ -3072,6 +3073,10 @@ img {
 
 .vendor {
   opacity: .5;
+}
+
+.g-recaptcha {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -140,7 +140,6 @@ $(function () {
         // Optional parameters
         // loop: true,
         speed: 700,
-        mousewheel: true,
         // Navigation arrows
         navigation: {
             nextEl: '.slider__next',
@@ -185,7 +184,6 @@ window.onload = function () {
         grecaptcha.execute();
 
     });
-
 
 };
 
