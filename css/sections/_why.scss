@@ -14,6 +14,10 @@
     right: -180px;
     width: 561px;
 
+    @media (max-width: 1699.99px) and (min-width: 1199.99px){
+      display: none;
+    }
+
     @include lg-block {
       width: 434px;
       height: 587px;
