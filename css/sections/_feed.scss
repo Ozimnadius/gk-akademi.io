@@ -1,7 +1,7 @@
 .form {
   width: 584px;
   background-image: linear-gradient(to top, $text 0%, #2b2d2f 100%);
-  padding: 30px 85px 125px 40px;
+  padding: 45px 85px 120px 40px;
   position: relative;
   @include lg-block {
     width: 578px;
@@ -69,13 +69,16 @@
     @include sm-block {
       font-size: 20px;
     };
+    @include xs-block {
+      font-size: 18px;
+    };
   }
 
   &__fields {
     margin-bottom: 20px;
   }
   &__field {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -86,13 +89,20 @@
     border-radius: 2px;
     border: 1px solid $bg;
     background-color: transparent;
-    padding: 14px 20px;
+    padding: 13px 20px;
     outline: none;
     color: $bg;
+
+    &_area {
+      height: 80px;
+    }
 
     &_2 {
       border: 1px solid $text;
       color: $text;
+      &.form__input_area {
+        height: 100px;
+      }
     }
   }
 
@@ -275,10 +285,10 @@
       text-transform: uppercase;
       @include lg-block {
         display: flex;
-        margin-bottom: 485px;
+        margin-bottom: 570px;
       };
       @include xs-block {
-        margin-bottom: 420px;
+        margin-bottom: 500px;
       };
 
       &:before {
@@ -287,7 +297,7 @@
         height: 50px;
         width: 16px;
         background: $bg;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         @include lg-block {
           height: 16px;
           flex-grow: 1;
@@ -305,7 +315,7 @@
         height: 50px;
         width: 16px;
         background: $bg;
-        margin-top: 20px;
+        margin-top: 40px;
         @include lg-block {
           height: 16px;
           flex-grow: 1;

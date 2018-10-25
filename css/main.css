@@ -1717,7 +1717,7 @@ img {
   background-image: -webkit-linear-gradient(bottom, #202123 0%, #2b2d2f 100%);
   background-image: -o-linear-gradient(bottom, #202123 0%, #2b2d2f 100%);
   background-image: linear-gradient(to top, #202123 0%, #2b2d2f 100%);
-  padding: 30px 85px 125px 40px;
+  padding: 45px 85px 120px 40px;
   position: relative;
 }
 
@@ -1810,12 +1810,18 @@ img {
   }
 }
 
+@media screen and (max-width: 575.99px) {
+  .form__title {
+    font-size: 18px;
+  }
+}
+
 .form__fields {
   margin-bottom: 20px;
 }
 
 .form__field {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form__field:last-child {
@@ -1827,14 +1833,22 @@ img {
   border-radius: 2px;
   border: 1px solid #ffffff;
   background-color: transparent;
-  padding: 14px 20px;
+  padding: 13px 20px;
   outline: none;
   color: #ffffff;
+}
+
+.form__input_area {
+  height: 80px;
 }
 
 .form__input_2 {
   border: 1px solid #202123;
   color: #202123;
+}
+
+.form__input_2.form__input_area {
+  height: 100px;
 }
 
 .form__submit {
@@ -2064,13 +2078,13 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 485px;
+    margin-bottom: 570px;
   }
 }
 
 @media screen and (max-width: 575.99px) {
   .feed__title-text {
-    margin-bottom: 420px;
+    margin-bottom: 500px;
   }
 }
 
@@ -2080,7 +2094,7 @@ img {
   height: 50px;
   width: 16px;
   background: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1199.99px) {
@@ -2107,7 +2121,7 @@ img {
   height: 50px;
   width: 16px;
   background: #ffffff;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 1199.99px) {

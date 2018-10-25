@@ -93,6 +93,10 @@ function callorderSubmit($cnf, $data)
                 <td><b>Email: </b></td>
                 <td><?= $data['email'] ?></td>
             </tr>
+            <tr>
+                <td><b>Вопрос: </b></td>
+                <td><?= $data['comment'] ?></td>
+            </tr>
         </table>
 
         <?

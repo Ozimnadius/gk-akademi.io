@@ -668,6 +668,9 @@
                                 <div class="form__field">
                                     <input type="email" name="email" class="form__input" placeholder="E-mail">
                                 </div>
+                                <div class="form__field">
+                                    <textarea name="comment" class="form__input form__input_area" placeholder="Вопрос"></textarea>
+                                </div>
                             </div>
 
                             <div class="form__submit">
@@ -879,6 +882,9 @@
                                     <input type="email" name="email" class="form__input form__input_2"
                                            placeholder="E-mail">
                                 </div>
+                                <div class="form__field">
+                                    <textarea name="comment" class="form__input form__input_area form__input_2" placeholder="Вопрос"></textarea>
+                                </div>
                             </div>
 
                             <div class="form__submit">
@@ -979,6 +985,9 @@
                     </div>
                     <div class="form__field">
                         <input type="email" name="email" class="form__input form__input_2" placeholder="E-mail">
+                    </div>
+                    <div class="form__field">
+                        <textarea name="comment" class="form__input form__input_area form__input_2" placeholder="Вопрос"></textarea>
                     </div>
                 </div>
 
