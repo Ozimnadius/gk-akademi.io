@@ -243,6 +243,10 @@
   background-position: center 0;
   padding: 70px 0 0 0;
 
+  @media (max-width: 1700px) {
+    background-image: url(../images/bg/bg-feed2.jpg);
+  }
+
   &__title {
     @include col;
     @include size(21.5);
